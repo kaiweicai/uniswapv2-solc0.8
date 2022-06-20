@@ -34,7 +34,9 @@ const config: HardhatUserConfig = {
     },
   },
   gasReporter: {
-    enabled: process.env.REPORT_GAS !== undefined,
+    // enabled: process.env.REPORT_GAS !== undefined,
+    enabled: true,
+    // gasPrice: 21,
     currency: "USD",
   },
   typechain: {

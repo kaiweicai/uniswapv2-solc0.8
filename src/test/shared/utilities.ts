@@ -1,6 +1,7 @@
 import { MockProvider } from "@ethereum-waffle/provider";
 import { BigNumber, Contract } from "ethers";
 import { utils as ethutil } from "ethers";
+import { ERC20 } from "../../types";
 
 const { keccak256, defaultAbiCoder, toUtf8Bytes, solidityPack } = ethutil;
 
@@ -48,7 +49,7 @@ export function getCreate2Address(
 }
 
 export async function getApprovalDigest(
-  token: Contract,
+  token: Contract|ERC20,
   approve: {
     owner: string;
     spender: string;
